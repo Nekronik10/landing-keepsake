@@ -198,6 +198,8 @@ section {
 }
 
 .hero-actions{
+    display: flex;
+    gap: 12px;
     margin-top: 10px;
 }
 
@@ -209,7 +211,6 @@ section {
     font-weight: 400;
     text-transform: uppercase;
     padding: 9.5px 20px;
-    margin-right: 10px;
     transition: 0.3s;
 }
 
@@ -255,6 +256,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 24px;
 }
 
@@ -268,7 +270,7 @@ section {
     font-size: 12px;
     font-family: var(--font-heading);
     text-transform: uppercase;
-    padding: 10px 26px;
+    padding: 10px 16px;
     transition: 0.3s;
 }
 
@@ -276,6 +278,7 @@ section {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 14px;
 }
 
@@ -375,6 +378,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 36px;
+    font-family: 28px;
     font-weight: 300;
     font-family: var(--font-heading);
 }
@@ -420,7 +424,6 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    width: 257px;
 }
 
 .service__icon {
@@ -444,6 +447,10 @@ section {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--color-text-dark);
+}
+
+.service__text{
+    width: 257px;
 }
 
 
@@ -488,15 +495,17 @@ section {
 }
 
 .client-list {
-  height: 72px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .client-logo {
+  text-align: center;
   font-size: 22px;
+  padding: 23.4px 0;
   color: var(--color-logo);
   letter-spacing: 1px;
 }
@@ -797,7 +806,7 @@ section {
 }
 
 .subscribe__input:focus {
-    border-color: var(--color-teal);
+    border: 1px solid var(--color-teal);
 }
 
 
@@ -857,7 +866,9 @@ section {
     background-color: var(--color-accent);
 }
 
-
+.newsletter__text{
+    padding-bottom: 14px;
+}
 
 .newsletter__success {
     display: none;
@@ -952,4 +963,106 @@ section {
 }
 .social__link--pi  { 
     background-color: #E84849; 
+}
+
+
+@media (max-width: 1279px){
+:root {
+    --container-gap: 40px;
+    --section-gap: 82px;
+}
+
+/* HEADER */
+
+.header-inner{
+    margin: 22px 0;
+}
+
+.nav-list {
+    gap: 24px;
+}
+
+/* HERO */
+.hero{
+    padding: 136px 0 52px;
+}
+
+.hero-title{
+    font-size: 32px;
+}
+
+/* WORKS */
+
+.portfolio {
+    gap: 12px;
+}
+
+.project {
+    flex: 0 0 auto;
+    aspect-ratio: auto;  
+}
+
+.project:nth-child(9){
+    display: none;
+}
+
+.project__img {
+    width: 338px;
+    height: 267px;
+    object-fit: cover;
+}
+
+/* CONTACT */
+
+.contact-title{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* SERVICES */
+
+.services {
+    gap: 32px 24px;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1 1 calc(50% - 12px);
+}
+
+.service__text{
+    width: 332px;
+}
+
+/* CLIENT */
+
+.client-logo {
+    flex: 1 1 calc((100%) / 3);    
+}
+
+.testimonial__text{
+    font-size: 19px;
+    line-height: 30px;
+}
+
+/* JOURNAL */
+
+.journal__container{
+    padding-bottom: 72px;
+}
+
+/* Footer */
+
+.footer__nav {
+    gap: 32px;
+}
+
+.footer__col {
+    width: 140px;
+}
+
+.newsletter {
+    width: 330px;
+}
+
 }
