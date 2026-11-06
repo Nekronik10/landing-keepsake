@@ -29,9 +29,8 @@
   --form-text-color: #8E9297;
   --checkbox-border-color: #55555A;
   --checkbox-text-color: #777B80;
-  
-  --container: 1100px;
-  --section-gap: 90px;
+  --container-gap: 90px;
+  --section-gap: 100px;
 }
 
 * {
@@ -65,12 +64,12 @@ p{
 
 
 .container {
-  max-width: var(--container);
-  margin: 0 auto;
+    padding: 0 var(--container-gap);
+    margin: 0 auto;
 }
 
 section {
-  padding: 100px var(--section-gap) 0;
+    padding: var(--section-gap) 0 0;
 }
 
 .title {
@@ -109,7 +108,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    margin: 30px 0;
 }
 
 .logo {
@@ -412,6 +411,7 @@ section {
     display: flex;
     gap: 24px;
     text-align: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
