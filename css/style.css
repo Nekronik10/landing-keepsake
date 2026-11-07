@@ -332,6 +332,7 @@ section {
 
 .btn--secondary{
     border: 1px solid var(--color-border);
+    color: var(--color-text-dark);
     background-color: #fff;
 }
 
